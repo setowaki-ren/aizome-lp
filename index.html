@@ -4,12 +4,12 @@
 <meta charset="utf-8" />
 <title>Aizome — 地方中小企業のAI利用率を、1%引き上げる。</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="バックオフィス特化のAI研修・AI導入支援。助成金活用で最大75%OFF。地方中小企業の現場に根付くAI活用を実現します。" />
+<meta name="description" content="バックオフィス特化のAI研修・AI導入支援。一人当たり75%の助成金活用。地方中小企業の現場に根付くAI活用を実現します。" />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="robots" content="index, follow" />
 <meta property="og:title" content="Aizome — バックオフィス特化のAI研修・AI導入支援" />
-<meta property="og:description" content="助成金活用で最大75%OFF。地方中小企業の現場に根付くAI活用を実現します。" />
+<meta property="og:description" content="一人当たり75%の助成金活用。地方中小企業の現場に根付くAI活用を実現します。" />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2447,15 +2447,10 @@
   }
 
 
-  /* FAQ — smaller size overall */
-  .faq-q-pro { font-size: 22px !important; width: 36px !important; }
-  .faq-card-pro summary { padding: 18px 22px !important; }
-  .faq-card-pro summary > div .pill { font-size: 11px !important; padding: 4px 10px !important; }
-  .faq-card-pro summary > div span.jp.text-\[15px\],
-  .faq-card-pro summary > div span.jp { font-size: 14px !important; }
-  .faq-card-pro .faq-icon { width: 24px !important; height: 24px !important; font-size: 14px !important; }
-  .faq-card-pro > div { padding-left: 22px !important; padding-right: 22px !important; }
-  .faq-card-pro > div p { font-size: 13px !important; }
+  /* FAQ — sizing now driven by Tailwind text-[NNpx] classes inline (no overrides) */
+  .faq-q-pro { font-size: 28px !important; width: 40px !important; }
+  .faq-card-pro summary { padding: 22px 26px !important; }
+  .faq-card-pro .faq-icon { width: 28px !important; height: 28px !important; font-size: 18px !important; }
 
 
   /* SP: Problem cards — Grid layout: image spans 2 rows on left, "01 課題" + body stack on right */
@@ -2480,7 +2475,7 @@
     }
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card {
       display: grid !important;
-      grid-template-columns: 36% 1fr !important;
+      grid-template-columns: 30% 1fr !important;
       grid-template-rows: auto auto !important;
       column-gap: 14px !important;
       row-gap: 8px !important;
@@ -2512,11 +2507,11 @@
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card .flex.items-baseline .label {
       font-size: 15px !important;
     }
-    /* Body text → bottom-right cell. Allow CJK to wrap when overflowing, but keep <br> as primary break */
+    /* Body text → bottom-right cell. Wrap CJK when overflowing, but keep <br> as primary break */
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card div[class*="text-[17px] md:text-[19px]"] {
       grid-column: 2 !important;
       grid-row: 2 !important;
-      font-size: 14px !important;
+      font-size: 17px !important;
       line-height: 1.6 !important;
       margin-bottom: 0 !important;
       word-break: normal !important;
@@ -2527,7 +2522,7 @@
   /* Extra-small screens: scale down a touch so phrases don't overflow */
   @media (max-width: 380px) {
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card div[class*="text-[17px] md:text-[19px]"] {
-      font-size: 13px !important;
+      font-size: 15px !important;
     }
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card .flex.items-baseline .display.jp {
       font-size: 24px !important;
@@ -2609,14 +2604,13 @@
        style="box-shadow: rgba(14,21,48,0.06) 0px 4px 16px -4px;">
     <a href="#" class="flex items-center gap-2.5">
       <span class="display text-[26px]" style="letter-spacing: -0.03em; color: var(--aizome-deep); font-weight: 700;">Aizome</span>
-      <span class="text-[13px] text-[var(--stone)] mt-1">®</span>
     </a>
     <div class="flex items-center gap-6">
       <div class="desktop-nav-links flex gap-6 items-center">
         <a href="#service" class="text-[16px] text-[var(--ink)] hover:text-[var(--aizome)] transition-colors jp" style="font-weight: 600;">事業内容</a>
         <a href="#case"    class="text-[16px] text-[var(--ink)] hover:text-[var(--aizome)] transition-colors jp" style="font-weight: 600;">導入事例</a>
         <a href="#faq"     class="text-[16px] text-[var(--ink)] hover:text-[var(--aizome)] transition-colors jp" style="font-weight: 600;">よくある質問</a>
-        <a href="#team"    class="text-[16px] text-[var(--ink)] hover:text-[var(--aizome)] transition-colors jp" style="font-weight: 600;">会社情報</a>
+        <a href="#team"    class="text-[16px] text-[var(--ink)] hover:text-[var(--aizome)] transition-colors jp" style="font-weight: 600;">運営チーム</a>
       </div>
       <div class="flex gap-2 items-center">
         <a href="#contact" data-cta="dl" class="desktop-cta-ghost btn" style="padding: 12px 22px; font-size: 16px; background: #22272f; color: #fff; border: 1px solid #22272f;">資料ダウンロード</a>
@@ -2635,7 +2629,7 @@
     <a href="#service" class="mlink mclose">事業内容</a>
     <a href="#case"    class="mlink mclose">導入事例</a>
     <a href="#faq"     class="mlink mclose">よくある質問</a>
-    <a href="#team"    class="mlink mclose">会社情報</a>
+    <a href="#team"    class="mlink mclose">運営チーム</a>
     <a href="#contact" class="mlink mclose">無料相談</a>
     <a href="#contact" data-cta="dl" class="btn mclose" style="padding: 14px 22px; font-size: 14px; background: #22272f; color: #fff; border: 1px solid #22272f; width: 100%; margin-top: 28px; display: flex; justify-content: center;">資料ダウンロード</a>
     <a href="#contact" class="btn btn-primary w-full mt-3 mclose" style="padding: 16px 24px; font-size: 15px;">無料相談を申し込む →</a>
@@ -2664,7 +2658,7 @@
 
         <p class="fr-2 jp mt-8 md:mt-10 leading-[2] text-[var(--graphite)] max-w-[560px]" style="font-size: clamp(15px, 0.6vw + 12px, 18px);">
           事務作業を効率化。そして、バックオフィスをAI浸透の主軸に。<br>
-          助成金活用で最大<span style="color: var(--ink); font-weight: 700;">75%OFF</span>。現場に根付くAI活用を実現します。
+          一人当たり<span style="color: var(--ink); font-weight: 700;">75%</span>の助成金活用。現場に根付くAI活用を実現します。
         </p>
 
         <div class="fr-3 flex flex-wrap gap-4 mt-9 md:mt-11 items-center">
@@ -3164,104 +3158,104 @@
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q1</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">助成金は誰でも使えますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">助成金は誰でも使えますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">雇用保険加入者の方が対象です。1訓練あたり10時間以上・就業時間内の実施・Off-JT 訓練であること、などの要件があります。御社の状況に合わせて適用可否をお伝えしますので、初回面談時にお気軽にご相談ください。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">雇用保険加入者の方が対象です。1訓練あたり10時間以上・就業時間内の実施・Off-JT 訓練であること、などの要件があります。御社の状況に合わせて適用可否をお伝えしますので、初回面談時にお気軽にご相談ください。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q2</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">助成額はいくらになりますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">助成額はいくらになりますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">「人材開発支援助成金（事業展開等リスキリング支援コース）」の活用で、経費助成として研修費の最大<span style="color: var(--accent-deep); font-weight: 700;">75%</span>（中小企業／大企業は60%）が対象になります。1訓練あたり上限30万円・1人年3回まで利用可能、1事業所の年間上限は1億円です。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">「人材開発支援助成金（事業展開等リスキリング支援コース）」の活用で、経費助成として研修費の最大<span style="color: var(--accent-deep); font-weight: 700;">75%</span>（中小企業／大企業は60%）が対象になります。1訓練あたり上限30万円・1人年3回まで利用可能、1事業所の年間上限は1億円です。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q3</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">助成金申請の手続きは煩雑そうですが、サポートはありますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">助成金申請の手続きは煩雑そうですが、サポートはありますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">提携の社労士が、申請書類の作成から労働局への提出、不備対応まで一気通貫でサポートします。AIを活用した申請書作成のため、申請1回あたり<span style="color: var(--ink); font-weight: 700;">11,000円（税込）</span>で対応可能です。煩雑な事務作業はこちらで巻き取りますので、安心してご導入いただけます。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">提携の社労士が、申請書類の作成から労働局への提出、不備対応まで一気通貫でサポートします。AIを活用した申請書作成のため、申請1回あたり<span style="color: var(--ink); font-weight: 700;">11,000円（税込）</span>で対応可能です。煩雑な事務作業はこちらで巻き取りますので、安心してご導入いただけます。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q4</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">研修内容は会社に合わせてカスタマイズできますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">研修内容は会社に合わせてカスタマイズできますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">はい。事前のヒアリングシートとオンライン面談で御社の業務課題・現状のITリテラシー・優先度を丁寧に伺ったうえで、現場で使えるオリジナルカリキュラムを設計します。メール・Excel・議事録・マニュアル作成・資料作成・カスタマーサポートなど、課題感のある業務領域を中心に組み立てます。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">はい。事前のヒアリングシートとオンライン面談で御社の業務課題・現状のITリテラシー・優先度を丁寧に伺ったうえで、現場で使えるオリジナルカリキュラムを設計します。メール・Excel・議事録・マニュアル作成・資料作成・カスタマーサポートなど、課題感のある業務領域を中心に組み立てます。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q5</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">研修の時間や形式を教えてください</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">研修の時間や形式を教えてください</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">標準はワークショップ形式・全6回・合計12時間（1回約90分）です。eラーニングではなくオンタイムでの双方向講義のため、その場での質問・相談に対応できます。最少遂行人数は3名からとなります。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">標準はワークショップ形式・全6回・合計12時間（1回約90分）です。eラーニングではなくオンタイムでの双方向講義のため、その場での質問・相談に対応できます。最少遂行人数は3名からとなります。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q6</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">申込から研修開始までどのくらいかかりますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">申込から研修開始までどのくらいかかりますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">初回面談 → ヒアリング・カリキュラム策定 → 助成金申請・確定 → 研修費お支払い → 研修スタート の流れで、初回面談から研修開始まで概ね <span style="color: var(--ink); font-weight: 700;">約2ヶ月</span> です。スケジュールはご希望に応じて調整可能です。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">初回面談 → ヒアリング・カリキュラム策定 → 助成金申請・確定 → 研修費お支払い → 研修スタート の流れで、初回面談から研修開始まで概ね <span style="color: var(--ink); font-weight: 700;">約2ヶ月</span> です。スケジュールはご希望に応じて調整可能です。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q7</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">研修後のフォローはありますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">研修後のフォローはありますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">研修期間中は計3回のサポート面談を含み、学んだ内容が現場で機能するまで伴走します。研修後も希望に応じて月次MTG型の伴走サポート（プロジェクト進捗確認、新ツール提案、データ分析と改善提案）でアウトプットを定着させ、自走化までお支えします。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">研修期間中は計3回のサポート面談を含み、学んだ内容が現場で機能するまで伴走します。研修後も希望に応じて月次MTG型の伴走サポート（プロジェクト進捗確認、新ツール提案、データ分析と改善提案）でアウトプットを定着させ、自走化までお支えします。</p>
+        </div></div>
       </details>
 
       <details class="faq-card-pro">
         <summary class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-5 min-w-0">
             <span class="faq-q-pro">Q8</span>
-            <span class="jp text-[19px] font-medium" style="color: var(--ink);">どんな業界・規模での実績がありますか？</span>
+            <span class="jp text-[20px] font-medium" style="color: var(--ink);">どんな業界・規模での実績がありますか？</span>
           </div>
           <span class="faq-icon flex-shrink-0">+</span>
         </summary>
-        <div class="px-7 pb-6 pl-[100px]">
-          <p class="jp text-[17px] text-[var(--graphite)] leading-[2]">ブライダル（1,000名規模）・福祉（40〜800名規模）・不動産（120名規模）・製造（53名規模）・コンサル（10〜1,200名規模）など、業種・規模を問わず多様な企業様で導入実績があります。地方の中小企業を中心に、現場で機能するノウハウをお届けしています。</p>
-        </div>
+        <div><div class="px-7 pt-8 pb-5">
+          <p class="jp text-[18px] text-[var(--graphite)] leading-[2]">ブライダル（1,000名規模）・福祉（40〜800名規模）・不動産（120名規模）・製造（53名規模）・コンサル（10〜1,200名規模）など、業種・規模を問わず多様な企業様で導入実績があります。地方の中小企業を中心に、現場で機能するノウハウをお届けしています。</p>
+        </div></div>
       </details>
     </div>
   </div>
