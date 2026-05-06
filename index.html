@@ -950,7 +950,7 @@
     .pad-md { padding-top: 56px !important; padding-bottom: 56px !important; }
     .h2-section { font-size: 30px !important; line-height: 1.22 !important; }
     .h2-contact { font-size: 32px !important; line-height: 1.2 !important; }
-    .num-callout { font-size: 56px !important; }
+    .num-callout { font-size: 44px !important; }
     .step-num { font-size: 44px !important; }
     .qmark { font-size: 40px !important; }
     .pad-card { padding: 22px !important; }
@@ -2310,13 +2310,9 @@
     }
     .price-card { padding: 32px 20px 22px !important; }
     .form-card-pro2 { padding: 28px 20px !important; }
-    /* WhyAizome cards */
-    .num-callout {
-      font-size: 56px !important;
-    }
-    .num-callout[style*="font-size: 64px"] {
-      font-size: 44px !important;
-    }
+    /* WhyAizome cards — values now driven by inline font-size; this is just SP cap */
+    .num-callout { font-size: 44px !important; }
+    .num-callout[style*="font-size: 48px"] { font-size: 36px !important; }
     /* DATA cards */
     .reveal.reveal-d2.space-y-4 > div { padding: 18px 20px !important; }
     /* Header */
@@ -2373,8 +2369,8 @@
     .grid-cards.md\:grid-cols-2 > .pad-card {
       padding: 28px !important;
     }
-    .num-callout { font-size: clamp(48px, 6vw, 64px) !important; }
-    .num-callout[style*="font-size: 64px"] { font-size: clamp(40px, 5.4vw, 52px) !important; }
+    .num-callout { font-size: clamp(40px, 5vw, 52px) !important; }
+    .num-callout[style*="font-size: 48px"] { font-size: clamp(34px, 4.4vw, 44px) !important; }
     /* WhyAizome header → stack on tablet to avoid cramped flex-row (scope to inside section, exclude footer) */
     section .flex.flex-col.md\:flex-row.md\:items-end.justify-between.gap-6.mb-12 {
       flex-direction: column !important;
@@ -2459,19 +2455,15 @@
       padding-top: 24px !important;
     }
     /* FAQ — tighten summary left padding on SP so Q1 sits closer to card edge */
-    .faq-card-pro summary { padding: 18px 16px !important; }
-    .faq-card-pro summary > div.flex.items-center { gap: 12px !important; }
-    .faq-q-pro { font-size: 24px !important; width: 32px !important; }
+    .faq-card-pro summary { padding: 18px 12px 18px 8px !important; }
+    .faq-card-pro summary > div.flex.items-center { gap: 8px !important; }
+    .faq-q-pro { font-size: 22px !important; width: 28px !important; }
     /* Body wrapper also tighter on SP */
     .faq-card-pro div.px-7 { padding-left: 16px !important; padding-right: 16px !important; }
     /* Data card 1: shift 55.4% block slightly left on SP */
     .reveal.reveal-d2.space-y-4 .pl-10 { padding-left: 16px !important; }
     .reveal.reveal-d2.space-y-4 .pr-10 { padding-right: 16px !important; }
-    /* WhyAizome heading smaller on SP */
-    section#why h2.h2-section {
-      font-size: 19px !important;
-      line-height: 1.35 !important;
-    }
+    /* WhyAizome heading on SP — uses default Tailwind text-[44px] */
     /* Tighten the eyebrow + title block above the cards */
     section#problem .mb-8 {
       margin-bottom: 18px !important;
@@ -3004,7 +2996,7 @@
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
       <div>
         <div class="sec-eyebrow">WHY AIZOME</div>
-        <h2 class="h2-section h2-pro display text-[32px] md:text-[44px] mt-2 jp" style="line-height: 1.2;">
+        <h2 class="h2-section h2-pro display text-[44px] md:text-[56px] mt-2 jp" style="line-height: 1.15;">
           選ばれる<span class="grad-text">4つの理由</span>
         </h2>
         <div class="sec-divider"></div>
@@ -3019,7 +3011,7 @@
         <div class="gold-rim"></div>
         
         <div class="flex items-baseline gap-2 mb-5 flex-wrap">
-          <span class="num-callout" style="font-size: 48px; color: #fff; line-height: 1.05; font-weight: 700; letter-spacing: -0.04em;">バックオフィス</span>
+          <span class="num-callout" style="font-size: 40px; color: #fff; line-height: 1.05; font-weight: 700; letter-spacing: -0.04em;">バックオフィス</span>
           <span class="text-[18px] jp" style="color: rgba(255,255,255,0.65); font-weight: 600;">特化</span>
         </div>
         <p class="jp text-[15px] leading-[1.95]" style="color: rgba(255,255,255,0.82);">事務作業等の業務を対象に、実用的な業務効率化をご提案いたします。そして、バックオフィスから社内のAI推進を波及させていきます。</p>
@@ -3029,7 +3021,7 @@
         <div class="gold-rim"></div>
         
         <div class="flex items-baseline gap-2 mb-5 flex-wrap">
-          <span class="num-callout" style="color: #fff; font-size: 60px;">300</span>
+          <span class="num-callout" style="color: #fff; font-size: 52px;">300</span>
           <span class="text-[16px] jp ml-1" style="color: rgba(255,255,255,0.65); font-weight: 500;">社以上の研修実績</span>
         </div>
         <p class="jp text-[15px] leading-[1.95]" style="color: rgba(255,255,255,0.82);">製造・小売・建設・サービス業まで、業種を問わず支援した実績があります。現場で機能するノウハウをお届けします。</p>
@@ -3039,7 +3031,7 @@
         <div class="gold-rim"></div>
         
         <div class="flex items-baseline gap-2 mb-5 flex-wrap">
-          <span class="num-callout" style="color: #fff; font-size: 60px;">1000</span>
+          <span class="num-callout" style="color: #fff; font-size: 52px;">1000</span>
           <span class="text-[16px] jp ml-1" style="color: rgba(255,255,255,0.65); font-weight: 500;">人以上の累計受講者数</span>
         </div>
         <p class="jp text-[15px] leading-[1.95]" style="color: rgba(255,255,255,0.82);">地方中小企業を中心に、これまで多くの現場担当者・経営者のAI活用を支援してきました。受講後も伴走サポートで現場に根付かせます。</p>
@@ -3049,7 +3041,7 @@
         <div class="gold-rim"></div>
         
         <div class="flex items-baseline gap-2 mb-5 flex-wrap">
-          <span class="num-callout" style="color: #fff; font-size: 60px;">75%</span>
+          <span class="num-callout" style="color: #fff; font-size: 52px;">75%</span>
           <span class="text-[16px] jp ml-1" style="color: rgba(255,255,255,0.65); font-weight: 600;">研修費用の補助額</span>
         </div>
         <p class="jp text-[15px] leading-[1.95]" style="color: rgba(255,255,255,0.82);">低コストでAI導入を実現。人材開発支援助成金等で、研修費の最大75%を圧縮。申請書類作成までサポートします。</p>
