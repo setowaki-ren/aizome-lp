@@ -2237,7 +2237,7 @@
     /* Hero mobile: H1 top full-width / subtext-left + video-right / CTAs bottom full */
     .hero-pad {
       padding-top: 56px !important;
-      padding-bottom: 140px !important;
+      padding-bottom: 60px !important;
       padding-left: 20px !important;
       padding-right: 20px !important;
     }
@@ -2457,8 +2457,14 @@
   @media (max-width: 768px) {
     /* Problem section — extend gray bg upward by giving padding-top */
     section#problem.pad-md {
-      padding-top: 40px !important;
+      padding-top: 24px !important;
     }
+    /* FAQ — tighten summary left padding on SP so Q1 sits closer to card edge */
+    .faq-card-pro summary { padding: 18px 16px !important; }
+    .faq-card-pro summary > div.flex.items-center { gap: 12px !important; }
+    .faq-q-pro { font-size: 24px !important; width: 32px !important; }
+    /* Body wrapper also tighter on SP */
+    .faq-card-pro div.px-7 { padding-left: 16px !important; padding-right: 16px !important; }
     /* WhyAizome heading smaller on SP */
     section#why h2.h2-section {
       font-size: 22px !important;
@@ -2631,8 +2637,8 @@
     <a href="#faq"     class="mlink mclose">よくある質問</a>
     <a href="#team"    class="mlink mclose">運営チーム</a>
     <a href="#contact" class="mlink mclose">無料相談</a>
-    <a href="#contact" data-cta="dl" class="btn mclose" style="padding: 12px 22px; font-size: 14px; background: #22272f; color: #fff; border: 1px solid #22272f; width: 100%; margin-top: 16px; display: flex; justify-content: center;">資料ダウンロード</a>
-    <a href="#contact" class="btn btn-primary w-full mt-2 mclose" style="padding: 14px 24px; font-size: 15px;">無料相談を申し込む →</a>
+    <a href="#contact" data-cta="dl" class="btn mclose" style="padding: 18px 22px; font-size: 16px; background: #22272f; color: #fff; border: 1px solid #22272f; width: 100%; margin-top: 32px; display: flex; justify-content: center;">資料ダウンロード</a>
+    <a href="#contact" class="btn btn-primary w-full mt-3 mclose" style="padding: 18px 24px; font-size: 16px;">無料相談を申し込む →</a>
   </div>
 </div>
 
