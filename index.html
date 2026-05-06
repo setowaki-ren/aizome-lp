@@ -2428,7 +2428,7 @@
       right: -5% !important;
       left: auto !important;
       transform: none !important;
-      top: 13% !important;
+      top: 18% !important;
       bottom: auto !important;
       height: 64% !important;
     }
@@ -2440,7 +2440,7 @@
     .hero-video-bg {
       width: 62% !important;
       right: -7% !important;
-      top: 15% !important;
+      top: 20% !important;
       height: 60% !important;
     }
   }
@@ -2483,17 +2483,19 @@
     }
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card {
       display: grid !important;
-      grid-template-columns: 38% 1fr !important;
+      grid-template-columns: 34% 1fr !important;
       grid-template-rows: auto auto !important;
       column-gap: 18px !important;
       row-gap: 8px !important;
       align-items: center !important;
-      padding: 14px 16px 14px 8px !important;
+      padding: 14px 16px 14px 6px !important;
     }
-    /* Keep image at the visual size that 50% used to give, but only consume 38% of grid via overflow */
+    /* Image: visually larger + flush-left, recropped via cover */
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card .problem-illu {
-      width: 132% !important;
-      margin-left: -16% !important;
+      width: 156% !important;
+      margin-left: -28% !important;
+      background-size: cover !important;
+      background-position: center center !important;
     }
     .grid-cards.grid-cols-1.md\:grid-cols-3 > .card.pad-card .problem-illu {
       grid-column: 1 !important;
