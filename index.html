@@ -2650,8 +2650,10 @@
   <!-- Character video as deepest layer on desktop -->
   <div class="hero-video-bg block absolute" style="right: 11%; top: 5%; bottom: 13%; width: 38%; z-index: 1; pointer-events: none;">
     <video
+      id="hero-video"
       src="assets/hf_20260502_054903_a0e0eac5-ff20-4765-9a08-1d1b8c272e4d.mp4"
-      autoplay loop muted playsinline
+      autoplay loop muted playsinline webkit-playsinline preload="auto"
+      disablepictureinpicture disableremoteplayback
       style="width: 100%; height: 100%; object-fit: contain; object-position: right center; display: block;"
     ></video>
   </div>
@@ -2699,7 +2701,7 @@
             <div class="laurel-content">
               <div class="laurel-label jp">受講者数</div>
               <div class="laurel-num">
-                <span class="laurel-figure" data-count="1000">1000</span><span class="laurel-unit jp">人</span>
+                <span class="laurel-figure" data-count="2000">2000</span><span class="laurel-unit jp">人</span>
               </div>
               <div class="laurel-suffix jp">以上</div>
             </div>
@@ -3508,6 +3510,39 @@
       var inq = document.querySelector('input[name="contact-type"][value="お問い合わせ"]');
       if (inq) inq.checked = true;
     });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var v = document.getElementById('hero-video');
+  if (!v) return;
+  v.muted = true;
+  v.defaultMuted = true;
+  v.setAttribute('muted', '');
+  v.playsInline = true;
+  var tryPlay = function () {
+    var p = v.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(function () {
+        var resume = function () {
+          v.play().finally(function () {
+            document.removeEventListener('touchstart', resume, true);
+            document.removeEventListener('click', resume, true);
+            document.removeEventListener('scroll', resume, true);
+          });
+        };
+        document.addEventListener('touchstart', resume, { once: true, capture: true, passive: true });
+        document.addEventListener('click', resume, { once: true, capture: true });
+        document.addEventListener('scroll', resume, { once: true, capture: true, passive: true });
+      });
+    }
+  };
+  if (v.readyState >= 2) tryPlay();
+  else v.addEventListener('loadedmetadata', tryPlay, { once: true });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && v.paused) tryPlay();
   });
 })();
 </script>
