@@ -50,7 +50,7 @@
     --jp: 'Noto Sans JP', system-ui, sans-serif;
     --jp-serif: 'Shippori Mincho', 'Noto Serif JP', serif;
   }
-  html, body { margin: 0; padding: 0; background: var(--snow); color: var(--ink); }
+  html, body { margin: 0; padding: 0; background: #fcfcfc; color: var(--ink); overflow-x: hidden; }
   body {
     font-family: var(--body);
     font-weight: 400;
@@ -1906,16 +1906,16 @@
     border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(12px);
   }
   .glow-hero-tl {
-    position: absolute; top: -180px; left: -160px;
-    width: 620px; height: 620px;
-    background: radial-gradient(ellipse, rgba(245,181,0,0.30) 0%, rgba(255,216,107,0.22) 30%, rgba(255,243,204,0.18) 55%, transparent 78%);
-    border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(18px);
+    position: absolute; top: -200px; left: -160px;
+    width: 720px; height: 720px;
+    background: radial-gradient(ellipse, rgba(245,181,0,0.32) 0%, rgba(255,216,107,0.22) 30%, rgba(255,243,204,0.18) 55%, transparent 78%);
+    border-radius: 50%; pointer-events: none; z-index: 1; filter: blur(18px);
     animation: glow-breathe 7s ease-in-out infinite;
   }
   @media (max-width: 768px) {
     .glow-hero-tl {
-      top: -120px; left: -120px;
-      width: 380px; height: 380px;
+      top: -140px; left: -120px;
+      width: 460px; height: 460px;
     }
   }
 
@@ -2620,8 +2620,11 @@
   </defs>
 </svg>
 
+<!-- Top-of-page background glow (extends above nav) -->
+<div class="glow-hero-tl"></div>
+
 <!-- ───────────────── NAV ───────────────── -->
-<div class="sticky top-0 z-50 px-4 md:px-6">
+<div class="sticky top-4 z-50 px-4 md:px-6 pt-2">
   <nav class="nav-wrap max-w-[1200px] mx-auto bg-white/85 backdrop-blur-md border border-[var(--line)] rounded-full pl-9 pr-4 py-3.5 flex justify-between items-center"
        style="box-shadow: rgba(14,21,48,0.06) 0px 4px 16px -4px;">
     <a href="#" class="flex items-center gap-2.5">
@@ -2660,7 +2663,6 @@
 
 <!-- ───────────────── 01 HERO ───────────────── -->
 <section class="relative overflow-hidden" style="background: #fcfcfc;">
-  <div class="glow-hero-tl"></div>
   <!-- Character video as deepest layer on desktop -->
   <div class="hero-video-bg block absolute" style="right: 11%; top: 5%; bottom: 13%; width: 38%; z-index: 1; pointer-events: none;">
     <video
