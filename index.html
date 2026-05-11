@@ -1905,6 +1905,19 @@
     background: radial-gradient(circle, rgba(245,181,0,0.16) 0%, transparent 65%);
     border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(12px);
   }
+  .glow-hero-tl {
+    position: absolute; top: -180px; left: -160px;
+    width: 620px; height: 620px;
+    background: radial-gradient(ellipse, rgba(245,181,0,0.30) 0%, rgba(255,216,107,0.22) 30%, rgba(255,243,204,0.18) 55%, transparent 78%);
+    border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(18px);
+    animation: glow-breathe 7s ease-in-out infinite;
+  }
+  @media (max-width: 768px) {
+    .glow-hero-tl {
+      top: -120px; left: -120px;
+      width: 380px; height: 380px;
+    }
+  }
 
   /* sec-alt — clean light bg */
 
@@ -2647,6 +2660,7 @@
 
 <!-- ───────────────── 01 HERO ───────────────── -->
 <section class="relative overflow-hidden" style="background: #fcfcfc;">
+  <div class="glow-hero-tl"></div>
   <!-- Character video as deepest layer on desktop -->
   <div class="hero-video-bg block absolute" style="right: 11%; top: 5%; bottom: 13%; width: 38%; z-index: 1; pointer-events: none;">
     <video
